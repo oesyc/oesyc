@@ -108,7 +108,7 @@ const OrganizationPage = () => {
           <h1 className="italic font-semibold text-black mr-3 text-3xl">
             Hi, Mr
           </h1>
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#6432FF] to-[#EC0BE9] text-transparent bg-clip-text">{userDetails.name},</h1>
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#6432FF] to-[#EC0BE9] text-transparent bg-clip-text">{userDetails ? userDetails.name : ""},</h1>
         </div>
         <div className="mb-4">
           <h2 className="text-4xl font-semibold text-[#6432FF]">
