@@ -11,6 +11,7 @@ export async function generateMetadata({
 }:{
     params: {boardId: string};
 }) {
+    const id = "1";
     const session = await getSession();
     if(!session){
         redirect("/login");
