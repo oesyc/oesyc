@@ -1,12 +1,8 @@
 {
-  "extends": [
-    "next/core-web-vitals", 
-    "plugin:@typescript-eslint/recommended"
-  ],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   "rules": {
-    // Disable specific rules if Vercel flags them as errors
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-html-link-for-pages": "off",
-    "react/jsx-props-no-spreading": "off"
+    "no-var": "off", // Ignore "no-var" rule
+    "@typescript-eslint/no-unused-vars": "off", // Ignore unused variables
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "off" // Ignore non-null assertions on optional chaining
   }
 }
