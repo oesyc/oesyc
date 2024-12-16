@@ -11,7 +11,7 @@ export async function generateMetadata({
 }:{
     params: {boardId: string};
 }) {
-    const id = "1";
+    
     const session = await getSession();
     if(!session){
         redirect("/login");
@@ -22,10 +22,10 @@ export async function generateMetadata({
             title: "Board",
         };
     }
-    const {boardId} = params;
+    
     const board = await db.board.findUnique({
         where:{
-            id: boardId,
+            id: params.boardId,
             orgId,
         }
     });
@@ -49,10 +49,10 @@ const BoardIdLaout = async({children, params,}:{
     if(!orgId){
         redirect("/select-org");
     };
-    const {boardId} = params;
+    
     const board = await db.board.findUnique({
         where:{
-            id: boardId,
+            id: params.boardId,
             orgId,
         },
     });
