@@ -3,8 +3,7 @@ import { db } from "@/lib/db";
 import { notFound, redirect, RedirectType } from "next/navigation";
 import { BoardNavbar } from "./_components/board-navbar";
 import { getSession } from "@/lib/session";
-import { Navbar } from "./_components/navbar";
-import { ModalProvider } from "@/components/providers/modal-provider";
+
 
 
 export async function generateMetadata({
@@ -22,7 +21,7 @@ export async function generateMetadata({
             title: "Board",
         };
     }
-    const {boardId} = await params;
+    const {boardId} = params;
     const board = await db.board.findUnique({
         where:{
             id: boardId,
@@ -49,7 +48,7 @@ const BoardIdLaout = async({children, params,}:{
     if(!orgId){
         redirect("/select-org");
     };
-    const {boardId} = await params;
+    const {boardId} = params;
     const board = await db.board.findUnique({
         where:{
             id: boardId,
