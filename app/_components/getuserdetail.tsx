@@ -1,3 +1,4 @@
+"use client";
 export const getUserDetails = () => {
     if (typeof window !== "undefined") {
       const userDetails = localStorage.getItem("userDetails");

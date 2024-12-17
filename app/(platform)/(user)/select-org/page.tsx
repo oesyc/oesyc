@@ -11,8 +11,16 @@ const OrganizationPage = () => {
   const [organizations, setOrganizations] = useState([]);
   const [organizationName, setOrganizationName] = useState("");
   const [error, setError] = useState("");
+  const [userDetails, setUserDetails] = useState<any>(null);
+  const [isClient, setIsClient] = useState(false);
   
-  const userDetails = getUserDetails();
+  useEffect(() => {
+    setIsClient(true);
+    
+    // Fetch user details only on client-side
+    const fetchedUserDetails = getUserDetails();
+    setUserDetails(fetchedUserDetails);
+  }, []);
   // Fetch organizations when the component mounts
   useEffect(() => {
     const fetchOrganizations = async () => {

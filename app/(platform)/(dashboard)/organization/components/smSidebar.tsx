@@ -18,7 +18,10 @@ const SmSidebar = () => {
 
             {/* Notes */}
             <div className="flex items-center space-x-2 cursor-pointer p-2 hover:bg-gray-200 rounded-md">
-                <LuPencilLine className="h-5 w-5 text-[#454545]" />
+            <Link href={`/organization/${orgId}/notes`}>
+            <LuPencilLine className="h-5 w-5 text-[#454545]" />
+                </Link>
+                
 
             </div>
 

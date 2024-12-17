@@ -159,3 +159,20 @@ model invitations {
   listId     String
   status     String
 }
+model Note {
+  id        String     @id @default(cuid())
+  orgId     String
+  title     String
+  content   String
+  priority  Priority
+  category  String?
+  userId    String
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+}

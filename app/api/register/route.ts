@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     // Hash password (optional but recommended for security)
     // You can use bcrypt or any other hashing library here to hash the password
     ; // Replace this with password hashing logic (e.g., bcrypt)
-    const imageUrl = generateProfileIcon(name);
+    const imageUrl = await generateProfileIcon(name);
     try {
         const status = "pending"
         const invitation = await prisma.invitations.findFirst({
