@@ -9,7 +9,15 @@ export const Navbar = () => {
             <div className="md:max-w-screen-2xl mx-auto flex item-center w-full justify-between">
                 <div className="flex justify-center">
                 <div className="flex items-center justify-center">
-                <Logo/>
+                <div className="flex items-center justify-center">
+            <Image
+                src={isDarkMode ? '/Oesyc.png' : '/Oesyc.png'}
+                alt="Logo"
+                width={100} // Adjust width as needed
+                height={50} // Adjust height as needed
+                className="object-contain" // Optional: adjust for your design
+            />
+        </div>
                     </div>
                     <div>
                         <nav className="flex space-x-4 ml-10 mt-4 text-neutral-400">
